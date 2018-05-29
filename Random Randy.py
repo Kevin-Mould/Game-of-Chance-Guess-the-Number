@@ -8,13 +8,13 @@ for tries in range(0,5):
   print ("Take a Guess")
   Guess = int(input())
 
-  try:          #Testing exception Not working
+  try:          #Working on Exception Handling
     if RandomNumber != Guess:
       print ("Try Again")
     else:
       break
-  except ValueError:   #Testing exception Not working
-    print("You must enter a number!") #Exception
+  except ValueError:   #Working on Exception Handling
+    print("You must enter a number!")
   
 if RandomNumber == Guess:
   print ("CORRECT! Double or Nothing?")
