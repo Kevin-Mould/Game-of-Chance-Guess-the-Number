@@ -1,20 +1,20 @@
 #Kevin Mould
-from random import randint
+import random
 
-RandomNumber = randint(1,10)
+RandomNumber = random.randint(1,10)
 print ("Pick a number between 1 and 10. You have 5 tries. I'll tell you if you are correct.")
 
-for tries in range(0,5):
+for tries in range(1,6):
   print ("Take a Guess")
-  Guess = int(input())
-
-  try:          #Working on Exception Handling
-    if RandomNumber != Guess:
-      print ("Try Again")
-    else:
-      break
-  except ValueError:   #Working on Exception Handling
+  try:
+    Guess = int(input()) #TO DO-Fix Guess is not defined during an exception.
+  except ValueError:
     print("You must enter a number!")
+    
+  if RandomNumber != Guess:
+    print ("Try Again")
+  else:
+    break
   
 if RandomNumber == Guess:
   print ("CORRECT! Double or Nothing?")
