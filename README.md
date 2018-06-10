@@ -1,4 +1,4 @@
-# Gambling-Hot-or-Cold-Style
+# Game of Chance-Guess the Number
 A simple 50/50 game of chance built to showcase my knowledge of Python into a tangible program.
 
 Future Goals:
