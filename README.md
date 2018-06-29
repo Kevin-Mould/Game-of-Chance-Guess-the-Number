@@ -1,5 +1,7 @@
 # Game of Chance-Guess the Number
-A simple 50/50 game of chance built to showcase my knowledge of Python into a tangible program.
+You have 5 tries to guess the correct number that can be between 1-10. The number is randomized every game.
+
+
 
 Future Goals:
   Add Exception Handling to "handle" error's caused by typing non-integers into the Guess variable.
