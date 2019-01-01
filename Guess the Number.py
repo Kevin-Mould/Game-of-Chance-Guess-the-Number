@@ -1,4 +1,3 @@
-#Kevin Mould
 import random
 
 RandomNumber = random.randint(1,10)
