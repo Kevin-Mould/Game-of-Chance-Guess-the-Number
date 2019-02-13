@@ -5,5 +5,5 @@ Screenshots of the game:
 
 Guessing the correct number
 
-![](Pictures/Correct number.PNG)
+![](Pictures/Correctnumber.PNG)
 
