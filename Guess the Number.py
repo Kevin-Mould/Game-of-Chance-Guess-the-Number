@@ -1,23 +1,38 @@
 import random
 
-RandomNumber = random.randint(1,10)
-print ("Pick a number between 1 and 10. You have 5 tries. I'll tell you if you are correct.")
 
-for tries in range(1,6):
-  print ("Take a Guess")
-  try:
-    Guess = int(input()) #TO DO-Fix Guess is not defined during an exception.
-  except ValueError:
-    print("You must enter a number!")
+while True:
+
     
-  if RandomNumber != Guess:
-    print ("Try Again")
-  else:
-    break
-  
-if RandomNumber == Guess:
-  print ("CORRECT! Double or Nothing?")
-else:
-  print ("Sorry, out of tries. Try again, the luck is in your favor.")
+    # Picks a number from this range to be used as the random number 
+    randomNumber = random.randint(1,10)
 
-input("Press Enter to Exit")
+    
+    # Sets number of tries per game and handle errors that occur from not entering numbers into the guess variable
+    for tries in range(5):
+        try:
+            guess = int(input("Pick a number between 1 and 10. You have a total of 5 tries.\n"))
+        except ValueError:
+            print("You must enter a number between 1 and 10!")
+            continue
+
+
+        #Breaks the for loop if the random number is guessed correctly
+        if randomNumber != guess:
+            print("Sorry, try again")
+        else:
+            break
+
+        
+    #Gives games result and asks if you would like to replay the game  
+    if randomNumber == guess:
+        newGame = str(input("Correct! Another game? (yes/no)\n"))
+    else:
+        newGame = str(input("Sorry, out of tries. Another game? (yes/no)\n"))
+
+
+    #Determins if the game is replayed or not
+    if newGame == "yes":
+        continue
+    else:
+        break
