@@ -1,38 +1,55 @@
 import random
+def numberGame():
+    '''This function takes and evaluates your guess against the random number.'''
+
+    #Declares the random number the game will use
+    randomNumber=random.randint(1,50)
+    tries=0
 
 
-while True:
-
-    
-    # Picks a number from this range to be used as the random number 
-    randomNumber = random.randint(1,10)
-
-    
-    # Sets number of tries per game and handle errors that occur from not entering numbers into the guess variable
-    for tries in range(5):
+    #Every guess attempt increments the variable tries by 1. An invalid number decrements the variable tries.
+    while tries < 6:
         try:
-            guess = int(input("Pick a number between 1 and 10. You have a total of 5 tries.\n"))
-        except ValueError:
-            print("You must enter a number between 1 and 10!")
+            tries +=1
+            userGuess=int(input("Guess #" +str(tries) + "? "))
+            if tries == 5:
+                print("Sorry, out of tries. I was thinking of " + str(randomNumber) + ".")
+                return
+            elif userGuess > 50 or userGuess < 1:
+                tries -=1
+                print(str(userGuess) + " is an invalid number, pick a number between 1-50.")
+                continue
+        except:
+            tries -=1
+            print("Error, please enter a number between 1-50.")
             continue
 
 
-        #Breaks the for loop if the random number is guessed correctly
-        if randomNumber != guess:
-            print("Sorry, try again")
-        else:
-            break
+        #Evaluates the variable userGuess against the variable randomNumber.
+        if userGuess > randomNumber:
+            print(str(userGuess) + " is too high")
+        elif userGuess < randomNumber:
+            print(str(userGuess) + " is too low")
+        elif userGuess == randomNumber:
+            print("You are right! I was thinking of " + str(randomNumber) + "!")
+            return
 
+
+def startGame():
+    '''This function starts the game and asks if the game should be replayed.'''
+    print("I'm thinking of a number between 1-50. You have five tries to guess it.")
+
+    #Calls the numberGame function then asks if the game should be replayed.
+    while True:
+        numberGame()
         
-    #Gives games result and asks if you would like to replay the game  
-    if randomNumber == guess:
-        newGame = str(input("Correct! Another game? (yes/no)\n"))
-    else:
-        newGame = str(input("Sorry, out of tries. Another game? (yes/no)\n"))
+        
+        restartGame=str(input("Press \"y\" to play again, or any other button to exit: "))
+        if restartGame=="y":
+            continue
+        else:
+            return
 
-
-    #Determins if the game is replayed or not
-    if newGame == "yes":
-        continue
-    else:
-        break
+#Calls the startGame function.
+startGame()
+    
