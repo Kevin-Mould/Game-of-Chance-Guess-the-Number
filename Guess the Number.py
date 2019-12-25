@@ -5,6 +5,7 @@ def numberGame():
     #Declares the random number the game will use
     randomNumber=random.randint(1,50)
     tries=0
+    print("I'm thinking of a number between 1-50. You have five tries to guess it.")
 
 
     #Every guess attempt increments the variable tries by 1. An invalid number decrements the variable tries.
@@ -37,7 +38,6 @@ def numberGame():
 
 def startGame():
     '''This function starts the game and asks if the game should be replayed.'''
-    print("I'm thinking of a number between 1-50. You have five tries to guess it.")
 
     #Calls the numberGame function then asks if the game should be replayed.
     while True:
