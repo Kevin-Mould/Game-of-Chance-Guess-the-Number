@@ -11,10 +11,6 @@ Running out of tries:
 
 ![](Pictures/Outoftries.PNG)
 
-Replay game feature:
-
-![](Pictures/Newgamefeature.PNG)
-
-Handles exceptions that occur when non-numbers are entered:
+Handles exceptions that occur when user enters numbers that are out of range or contain the wrong type. Additionally, refunds the guess attempt: 
 
 ![](Pictures/Exceptionhandling.PNG)
