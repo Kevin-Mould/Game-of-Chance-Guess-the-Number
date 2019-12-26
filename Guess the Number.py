@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#The above is a shebang that allows this file to be compatable on both Windows and Linux operating systems.
+#The above is a shebang that allows this file to be compatible on both Windows and Linux operating systems.
 
 import random
 def numberGame():
