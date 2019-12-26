@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+#The above is a shebang that allows this file to be compatable on both Windows and Linux operating systems.
+
 import random
 def numberGame():
     '''This function takes and evaluates your guess against the random number.'''
