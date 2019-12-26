@@ -22,9 +22,9 @@ Handles exceptions that occur when user enters numbers that are out of range or 
 > git clone https://github.com/Kevin-Mould/Game-of-Chance-Guess-the-Number.git
 
 > cd Game-of-Chance-Guess-the-Number
-3.	Make the script executable:
+3.	Make the python program executable:
 > chmod +x “Guess the Number.py”
 4.	Change the Windows line endings (CRLF) to Linux line endings (LF):
 >  sed -i -e 's/\r$//' "Guess the Number.py"
-5.	Run the shell script:
+5.	Run the python program:
 > ./”Guess the Number.py”
